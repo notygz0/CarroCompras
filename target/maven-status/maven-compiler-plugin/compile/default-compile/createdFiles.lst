@@ -1,0 +1,8 @@
+com\mycompany\carrocompras\controlador\CarritoControlador.class
+com\mycompany\carrocompras\modelo\Producto.class
+com\mycompany\carrocompras\JakartaRestConfiguration.class
+com\mycompany\carrocompras\config\Conexion.class
+com\mycompany\carrocompras\app\AppInitializer.class
+com\mycompany\carrocompras\modelo\dao\ProductoDAO.class
+com\mycompany\carrocompras\resources\JakartaEE8Resource.class
+com\mycompany\carrocompras\config\Test.class
