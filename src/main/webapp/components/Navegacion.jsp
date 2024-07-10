@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="navbar navbar-expand-lg" style="background-color: #2C4975">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -15,19 +16,33 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="CarritoControlador?accion=listar">
-                        <i class="fa fa-shopping-cart"></i> (0) Carrito
+                    <a class="nav-link text-white" href="CarritoControladorr?accion=listar">
+                        <i class="fa fa-shopping-cart"></i> 
+                        <span class="fw-bold">${sessionScope.carrito != null ? sessionScope.carrito.size() : 0}</span> Carrito
+
                     </a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <a href="#" class="btn btn-dark">
+            <form class="d-flex">
+     <c:if test="${sessionScope.usuario == null}">
+                <a href="ClienteControlador?accion=nuevo" class="btn btn-dark">
                     <i class="fas fa-user-plus"></i> Registrarse
-                </a>  
-                <a href="#" class="btn btn-dark">
+                </a>
+                &nbsp;
+                <a href="AuthControlador?accion=login" class="btn btn-dark">
                     <i class="fas fa-user-lock"></i> Login
-                </a>  
-            </form>
+                </a>
+            </c:if>
+            
+            <c:if test="${sessionScope.usuario != null}">
+                <span class="btn btn-light">${sessionScope.usuario.nombresCompletos()}</span>
+                &nbsp;
+                <a href="AuthControlador?accion=logout" class="btn btn-dark">
+                    <i class="fa fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </c:if>
+        </form>
+
         </div>
     </div>
 </nav>

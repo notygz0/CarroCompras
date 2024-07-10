@@ -18,7 +18,7 @@ public class AppInitializer implements ServletContextListener {
         for (Producto producto : productos) {
             System.out.println("Producto: " + producto.getNombre());
         }
-        sce.getServletContext().setAttribute("productos", productos);
+        sce.getServletContext().setAttribute("productos",prodDAO.ListarTodos());
     }
 
     @Override

@@ -2,11 +2,35 @@
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
     <servlet>
         <servlet-name>CarritoControlador</servlet-name>
-        <servlet-class>com.mycompany.carrocompras.controlador.CarritoControlador</servlet-class>
+        <servlet-class>com.mycompany.carrocompras.controladorr.CarritoControladorr</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CarritoControladorr</servlet-name>
+        <servlet-class>com.mycompany.carrocompras.controladorr.CarritoControladorr</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClienteControlador</servlet-name>
+        <servlet-class>com.mycompany.carrocompras.controladorr.ClienteControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthControlador</servlet-name>
+        <servlet-class>com.mycompany.carrocompras.controladorr.AuthControlador</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CarritoControlador</servlet-name>
         <url-pattern>/CarritoControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarritoControladorr</servlet-name>
+        <url-pattern>/CarritoControladorr</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClienteControlador</servlet-name>
+        <url-pattern>/ClienteControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthControlador</servlet-name>
+        <url-pattern>/AuthControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

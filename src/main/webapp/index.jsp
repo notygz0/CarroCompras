@@ -17,21 +17,25 @@
 
 
             <div class="row">
-                <c:forEach items="${productos}" var="item">
+                <c:forEach items="${productos}" var="item" >
                     <div class="col-sm-3 mt-1">
-                        <div class="card">
-                            <img src="assets/img/productos/${item.imagen}" width="100%"
+                        <form action="CarritoControladorr" method="get">
+                            <div class="card">
+                                <img src="assets/img/productos/${item.imagen}" width="50%"
                                  alt="${item.nombre}"/>
-                            <div class="card-body">
+                                   <div class="card-body">
                                 <p class="fw-bold">${item.nombre}</p>
+                                <input type="hidden" name="accion" value="agregar">
+                                <input type="hidden" name="id" value="${item.idProd}">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <button type="button" class="btn btn-sm btn-primary">
+                                    <button type="submit" class="btn btn-sm btn-primary">
                                         <i class="fa fa-shopping-cart"></i> Agregar al carrito
                                     </button>
                                     <small class="fw-bold">$/${item.precio}</small>
                                 </div>
                             </div>
-                        </div>
+                          </div>
+                        </form>        
                     </div>
                 </c:forEach>
             </div>
